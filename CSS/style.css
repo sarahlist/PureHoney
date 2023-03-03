@@ -128,10 +128,24 @@ small {
 .clear {
     clear: both;
 }
-.wrapper {
-    margin: 0 auto;
-    padding: 0 10px;
-    width: 940px;
+.container {
+    position: relative;
+    text-align: center;
+    color:#444;
+}
+
+.PureHoney {
+    position: absolute;
+    top: 35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.newsletter {
+    position: absolute;
+    top: 70%;
+    left:50%;
+    transform: translate(-50%, -50%); 
 }
 
 #hero-image {
