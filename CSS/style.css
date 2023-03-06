@@ -62,6 +62,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
+    padding-right: 8%;
     margin-left: 2em;
 }
 
@@ -128,15 +129,17 @@ small {
 .clear {
     clear: both;
 }
-.container {
-    position: relative;
+.wrapper {
+    display: flex;
+    flex-direction: row;
+   
     text-align: center;
     color:#444;
 }
 
 .PureHoney {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 }
@@ -190,8 +193,11 @@ small {
 }
 
 #secondary-content {
+    display: flex;
+    flex-direction: row;
     padding: 60px 0;
     text-align: center;
+   
 }
 #secondary-content article {
     width: 460px;
@@ -223,24 +229,46 @@ article h4 {
     color: #fff;
 }
 
-footer {
-    padding: 60px 0;
-    background-color: #f8fafa;
+
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
 }
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+    background-color: #f8fafa; 
+}
+
 #footer-info {
     width: 380px;
     float: left;
     margin-top: 10px;
+    flex: 50%;
 }
 #footer-links {
     width: 520px;
     float: right;
+    flex: 50%;
 }
 #footer-links ul {
+    list-style: none;
     width: 150px;
     float: left;
     margin-left: 20px;
 }
 #footer-links ul li {
     margin: 10px 0;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+  
 }
