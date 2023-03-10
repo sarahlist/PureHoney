@@ -1,3 +1,5 @@
+/* Global Styles */
+
 body {
     background-color: #ffffff;
     color: #777;
@@ -129,13 +131,15 @@ small {
 .clear {
     clear: both;
 }
+
 .wrapper {
     display: flex;
     flex-direction: row;
-   
     text-align: center;
     color:#444;
 }
+
+/* styling for header section */
 
 .PureHoney {
     position: absolute;
@@ -150,6 +154,8 @@ small {
     left:50%;
     transform: translate(-50%, -50%); 
 }
+
+/* styling for hero image */
 
 #hero-image {
     height: 580px;
@@ -176,6 +182,8 @@ small {
     color: #fff;
 }
 
+/* styling for primary content */
+
 #primary-content {
     background-color: #f8fafa;
     padding: 60px 0;
@@ -192,6 +200,8 @@ small {
     margin: 20px 0;
 }
 
+/* styling for secondary content */
+
 #secondary-content {
     display: flex;
     flex-direction: row;
@@ -206,7 +216,9 @@ small {
     background-color: #f5f5f5;
 }
 #secondary-content article:first-child {
+    
     margin-right: 20px;
+    
 }
 #secondary-content article .overlay {
     background: rgba(255, 255, 255, .95);
@@ -229,7 +241,14 @@ article h4 {
     color: #fff;
 }
 
+/* Responsive layout -makes a one column layout instead of row. */
+@media (max-width: 800px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
 
+/* Footer Styling */
 
 @media (max-height:800px){
 	footer { position: static; }
