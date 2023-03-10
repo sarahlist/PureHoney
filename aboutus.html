@@ -32,9 +32,53 @@
         </div>        
     </header>
 
+    <div id="primary-content">
+        <div class="container">
+            
+            <article>
+                <h3>Welcome to Our Farm</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac 
+                    neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. 
+                    Integer porta sem nec nibh hendrerit imperdiet. 
+                </p>
+                
+            </article>
+        </div>
+    </div>
 
+    <section>
+        <div id="main">  
+            <div class="ourfamily">
+                <img src="images/honey-farm.jpg" alt="Honey Farm" width="460" height="345">
+                <button class="accordion">Our Family</button>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque 
+                    dignissim enim sit. Facilisi morbi tempus iaculis urna id volutpat. Nunc sed id 
+                    semper risus in hendrerit gravida rutrum quisque. Massa eget egestas purus viverra 
+                    accumsan in nisl nisi scelerisque. Donec ac odio tempor orci dapibus ultrices in.    
+                    </p>
+                </div>    
+            </div>
 
+              <div class="ourbees">
+                <img src="images/bees.jpg" alt="Bees" width="460" height="345">
+                <button class="accordion">Our Bees</button>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque 
+                    dignissim enim sit. Facilisi morbi tempus iaculis urna id volutpat. Nunc sed id 
+                    semper risus in hendrerit gravida rutrum quisque. Massa eget egestas purus viverra 
+                    accumsan in nisl nisi scelerisque. Donec ac odio tempor orci dapibus ultrices in.    
+                    </p>
+                </div>    
+               
+              </div>
 
+        </div>   
+
+    </section>
 
 
     <footer>
@@ -58,7 +102,22 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    </script>
 </body>
 
 </html>
