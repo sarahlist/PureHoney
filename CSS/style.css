@@ -24,7 +24,7 @@ h1 {
     width: 200px; // new width for screen <768px
     height: 200px; // new height for screen <768px
     }
-    }
+ }
 
 img {
    border: 1px solid #ddd;
@@ -387,6 +387,9 @@ article {
   
     .columns-desktop {
       display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
     }
      
     .columns {
@@ -397,10 +400,16 @@ article {
   /* Products */
 .products {
     width: 200px;
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
     background-color: #fff;
     border: solid 1px #ccc;
+  }
+
+  .products .title .price .columns {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
   }
   
   .products img {
@@ -429,6 +438,12 @@ article {
     border: solid 1px #f6aeae;
     border-radius: 3px;
     color: #fff;
+  }
+
+  @media (max-width: 800px) {
+    .products {
+        flex-direction: column;
+    }
   }
   
 /* Footer Styling */
