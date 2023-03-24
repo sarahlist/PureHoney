@@ -28,7 +28,11 @@
                     <li class="nav-item"><a href="newsletter.html">Newsletter</a></li>
                 </ul>
             </nav>
-            <h1>Childers Farm</h1> 
+               
+                <div class="SingleBee" style="display:block; transform: translate(-50%, -50%) translate (1100.5px, 0.5px) rotate(-10.4763deg);">
+                    <img id="SingleBee"  src="images/SingleBee.png" alt="Bee" />
+                </div>
+                <h1>Childers Farm </h1> 
         </div>        
     </header>
     
@@ -47,10 +51,14 @@
             
             <article>
                 <h3>Welcome to Our Farm</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac 
-                    neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. 
-                    Integer porta sem nec nibh hendrerit imperdiet. 
+                <p>Our honeybees are an integral part of our family's commitment to sustainable beekeeping practices. We 
+                    believe in treating our bees with the utmost care and respect, as they play a crucial role in pollinating 
+                    our local ecosystem and providing us with delicious honey. As responsible beekeepers, we regularly 
+                    monitor our hives to ensure that our bees are healthy and happy. We also practice responsible harvesting 
+                    techniques to ensure that we leave enough honey and pollen for the bees to sustain themselves throughout 
+                    the year. By following sustainable beekeeping practices, we not only support the health and well-being of 
+                    our bees but also contribute to the health of our local ecosystem. We are proud to be part of a growing 
+                    movement of environmentally conscious beekeepers who prioritize the well-being of their bees and the planet. 
                 </p>
                 
             </article>
@@ -113,7 +121,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      SingleBee.onclick = fucntion() {
+        let start = Date.now();
+        let timer = setInterval(function() {
+            let timePassed = Date.now() -start;
+            SingleBee.style.left = timePassed / 10 + 'px';
+            if(timePassed > 3000) clearInterval(timer);
+
+        },20);
+
+      }
+
+
+    </script>
 </body>
 
 </html>
