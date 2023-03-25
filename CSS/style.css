@@ -1,3 +1,5 @@
+/* Global Styles */
+
 body {
     background-color: #ffffff;
     color: #777;
@@ -15,6 +17,15 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* responsive image */
+
+@media (max-width:767px){
+    img {
+    width: 200px; /* new width for screen <768px */
+    height: 200px; /* new height for screen <768px */
+    }
+ }
+
 img {
    border: 1px solid #ddd;
    border-radius: 4px;
@@ -23,6 +34,89 @@ img {
    max-width: 100%;
    height: auto;
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    float: none;
+}
+
+
+main {
+    display: flex;
+    background-color: #c39636;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c39636;
+    
+  }
+  
+ #ourfamily {
+    margin: 0 40px 0 40px;
+    
+ }
+
+ #ourbees {
+    margin: 0 40px 0 40px;
+    
+ }
+
+ section {
+    display: flex;
+ }
+
+ article {
+    padding: 10px;
+    margin: 10px;
+    background: #c39636;
+    
+ } 
+
+ article {
+    flex: 2 300px;
+    
+ }
+/* accordion styling*/
+
+ .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+ }
+
+ .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  
 @media (max-width: 640px) {
     #navbar-content {
         text-align: center;
@@ -97,6 +191,7 @@ h3 {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
+    
 }
 h4 {
     font-size: 24px;
@@ -129,13 +224,50 @@ small {
 .clear {
     clear: both;
 }
+
+.wrapper {
+    float: right;
+    padding: 15px;
+}
 .wrapper {
     display: flex;
     flex-direction: row;
-   
     text-align: center;
     color:#444;
 }
+
+
+/* styling for about us page */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: none;
+}
+
+article:nth-of-type(3) {
+    flex: 3 200px;
+    display: flex;
+    flex-flow: column;
+}
+
+article {
+    display: block;
+}
+
+/* styling for header section */
 
 .PureHoney {
     position: absolute;
@@ -150,6 +282,8 @@ small {
     left:50%;
     transform: translate(-50%, -50%); 
 }
+
+/* styling for hero image */
 
 #hero-image {
     height: 580px;
@@ -176,6 +310,8 @@ small {
     color: #fff;
 }
 
+/* styling for primary content */
+
 #primary-content {
     background-color: #f8fafa;
     padding: 60px 0;
@@ -192,6 +328,8 @@ small {
     margin: 20px 0;
 }
 
+/* styling for secondary content */
+
 #secondary-content {
     display: flex;
     flex-direction: row;
@@ -206,7 +344,9 @@ small {
     background-color: #f5f5f5;
 }
 #secondary-content article:first-child {
+    
     margin-right: 20px;
+    
 }
 #secondary-content article .overlay {
     background: rgba(255, 255, 255, .95);
@@ -229,7 +369,103 @@ article h4 {
     color: #fff;
 }
 
+/* Responsive layout -makes a one column layout instead of row. */
+@media (max-width: 800px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
 
+/* Styling Products Page*/
+
+aside,
+article {
+  padding: 2em;
+}
+
+aside {
+  text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+.columns {
+    display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+      display: flex;
+    }
+  
+    aside {
+      margin-left: 2%;
+    }
+  
+    .columns-desktop {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+     
+    .columns {
+        flex-direction: column;
+    }
+  }
+
+  /* Products */
+.products {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+  }
+
+  .products .title .price .columns {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .products img {
+    width: 100%;
+  }
+  
+  .products .title {
+    font-weight: bold;
+  }
+  
+  .products .price {
+    text-align: right;
+  }
+  
+  .products .columns {
+    width: 100%;
+  }
+  
+  .products .columns div {
+    width: 50%;
+  }
+  
+  .products button {
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  @media (max-width: 800px) {
+    .products {
+        flex-direction: column;
+    }
+  }
+  
+/* Footer Styling */
 
 @media (max-height:800px){
 	footer { position: static; }
@@ -257,12 +493,55 @@ article h4 {
 #footer-links ul {
     list-style: none;
     width: 150px;
-    float: left;
+    float: right;
     margin-left: 20px;
+    margin-right: 20px;
 }
 #footer-links ul li {
     margin: 10px 0;
 }
+
+@keyframes SingleBee {
+    0% {
+        margin-top: 5px;
+    }
+    10% {
+        margin-top: 50px;
+    }
+    25% {
+        margin-top: 5px;
+    }
+    40% {
+        margin-top: 50px;
+    }
+    55% {
+        margin-top: 5px;
+    }
+    70% {
+        margin-top: 50px;
+    }
+    95% {
+        margin-top: 5px;
+    }
+    100% {
+        margin-top: 50px;
+        transform: translateX(-1000px) translateY(20px)  ;
+    }
+   
+}
+.SingleBee {
+    
+    position: absolute;
+    right: 0;
+    top: 10;
+    width: 30px;
+    height: 30px;
+    border: none;
+    opacity: 100%;
+    
+    animation: SingleBee 6s linear infinite;
+}
+
 
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
