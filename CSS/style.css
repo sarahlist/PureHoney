@@ -21,8 +21,8 @@ h1 {
 
 @media (max-width:767px){
     img {
-    width: 200px; // new width for screen <768px
-    height: 200px; // new height for screen <768px
+    width: 200px; /* new width for screen <768px */
+    height: 200px; /* new height for screen <768px */
     }
  }
 
