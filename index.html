@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
-
+    
 </head>
 
 <body>
@@ -27,6 +27,9 @@
                     <li class="nav-item"><a href="products.html">Products</a></li>
                     <li class="nav-item"><a href="newsletter.html">Blog</a></li>
                 </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
             </nav>
                
                 <div class="SingleBee" style="display:block; transform: translate(-50%, -50%) translate (1100.5px, 0.5px) rotate(-10.4763deg);">
@@ -127,7 +130,14 @@
 
         },20);
 
-      
+        function myFunction() {
+            var x = document.getElementById("navbar-content");
+            if (x.className === "navbar-nav") {
+              x.className += " responsive";
+            } else {
+              x.className = "navbar-nav";
+  }
+}
 
 
     </script>
