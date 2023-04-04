@@ -9,28 +9,43 @@
     
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <header>
-        <div class="navbar-nav text-center" id="navbar-content">    
-                   
-            <nav class="navbar">
-                
-                <a href="#"><img src="images/Honey-Logo.png"/>
-                <ul class="nav-links">
-                    
-                    <li class="nav-item"><a href="index.html">Home</a></li>
-                    <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a href="products.html">Products</a></li>
-                    <li class="nav-item"><a href="newsletter.html">Blog</a></li>
-                </ul>
-            </nav>
-            <h1>Childers Farm - Products</h1> 
-        </div>        
-    </header>
+        <section class="header">    
+            <nav> 
+                <a href="index.html"><img src="images/Honey-Logo.png"/>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                    <ul>
+                        <li ><a href="index.html">Home</a></li>
+                        <li ><a href="aboutus.html">About Us</a></li>
+                        <li ><a href="products.html">Products</a></li>
+                        <li ><a href="newsletter.html">Blog</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>   
+            </nav>  
+        </section>
+
+        <section>
+            <section class="flying-bee">
+                <div class="SingleBee" style="display:block; transform: translate(-50%, -50%) translate (1100.5px, 0.5px) rotate(-10.4763deg);">
+                    <img id="SingleBee"  src="images/SingleBee.png" alt="Bee" />
+                </div>
+
+                <h1>Childers Farm </h1> 
+            </section>    
+        </section>
+
+        
+
 
     <main>
         
@@ -106,7 +121,42 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+
+        /*Javascript for Toggle Menu */   
+    
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }   
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }   
+
+
+      SingleBee.onclick = fucntion();
+        let start = Date.now();
+        let timer = setInterval(function() {
+            let timePassed = Date.now() -start;
+            SingleBee.style.left = timePassed / 10 + 'px';
+            if(timePassed > 3000) clearInterval(timer);
+    
+        },20);
+    
+        function myFunction() {
+            var x = document.getElementById("navbar-content");
+            if (x.className === "navbar-nav") {
+              x.className += " responsive";
+            } else {
+              x.className = "navbar-nav";
+         }
+        }
+   
+
+    
+     
+
+    </script>
 </body>
 
 </html>

@@ -1,16 +1,17 @@
 /* Global Styles */
-
-body {
-    background-color: #ffffff;
-    color: #777;
-    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 p {
     line-height: 20px;
     margin-bottom: 20px;
 }
 h1 {
-    font-family: 'Crete Round', serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: #ddae44;
     font-size: 25px;
@@ -18,18 +19,51 @@ h1 {
 }
 
 /* Navigation bar*/
-
-.navbar-nav
-
-/* responsive image */
-
-@media (max-width:767px){
-    img .PureHoney .newsletter{
-    width: 200px; /* new width for screen <768px */
-    height: 200px; /* new height for screen <768px */
-    }
+.header{
+    min-height: 10vh;
+    width: 100%;
+    background-color: #c39636;
+    background-image: linear-gradient(rgba(4,9,30,0.7)),url(images/hives.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 4% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+ }
+ .nav-links{
+    flex: 1;
+    text-align: right;
+ }
+ .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+ }
+ .nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+ }
+ .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
  }
 
+.nav-links ul li:hover::after{width: 100%;
+}
 img {
    border: 1px solid #ddd;
    border-radius: 4px;
@@ -48,6 +82,10 @@ img {
 img {
     float: none;
 }
+
+/*homepage beehive image and pure honey childers farm blog button*/
+
+
 
 
 main {
@@ -136,115 +174,6 @@ main {
   }
 
   
-@media (max-width: 640px) {
-    #navbar-content {
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 0.8em 0;
-    }
-}
-
-nav {
-    width: 100%;
-    background-color: #c39636;
-    padding-left: 30px;
-    padding-right: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #c39636;
-    overflow: hidden;
-    
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    padding-right: 8%;
-    margin-left: 2em;
-}
-
-.navbar .nav-links{
-    float: right;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav-item a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: white;
-}
-
-.nav-item:hover {
-    background-color: white;
-}
-
-.nav-item:hover a{
-    color: #3d3416;
-}
-
-.navbar-nav text-center {
-    overflow: hidden;
-    }
-
-.navbar-nav text-center ul {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}    
-
-.navbar-nav text-center .icon {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .navbar-nav ul:not(:first-child) {display: none;}
-    .navbar-nav ul.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-@media screen and (max-width: 600px) {
-    .navbar-nav.responsive {position: relative;}
-    .navbar-nav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  
-
-    .navbar-nav text-center .responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-}
-
-}
-
 
 h2 {
     font-weight: 300;
@@ -349,42 +278,8 @@ article {
 }
 
 
-/* styling for header section */
 
-.PureHoney {
-    position: absolute;
-    padding-top: 25px;
-    padding-bottom: 200px;
-    top: 60%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    
-}
 
-.newsletter {
-    position: absolute;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    top: 70%;
-    left:50%;
-    transform: translate(-50%, -50%); 
-}
-
-@media (max-width: 300px) {
-    h2 .button-1 { font-size: 70%; }
-}
-
-@media (min-width: 500px) {
-    h2 .button-1 { font-size: 80%; }
-}
-
-@media (min-width: 700px) {
-    h2  .button-1 { font-size: 100%; }
-}
-
-@media (min-width: 1200px) {
-    h2 .button-1 { font-size: 120%; }
-}
 
 /* styling for hero image */
 
@@ -411,6 +306,7 @@ article {
 .button-1:hover {
     background-color: #02b8dd;
     color: #fff;
+    transition: 0.5s;
 }
 
 /* styling for primary content */
@@ -470,6 +366,7 @@ article h4 {
 .more-link:hover {
     background-color: #02b8dd;
     color: #fff;
+    transition: 0.5s;
 }
 
 /* Responsive layout -makes a one column layout instead of row. */
@@ -647,6 +544,328 @@ article {
 
 
 
+  
+ 
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  
+}
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 10vh;
+    width: 100%;
+    background-color: #c39636;
+    background-image: linear-gradient(rgba(4,9,30,0.7)),url(images/hives.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 4% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+ nav img{
+    width: 150px;
+ }
+ .nav-links{
+    flex: 1;
+    text-align: right;
+ }
+ .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+ }
+ .nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+ }
+ .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{width: 100%;
+ }
+
+ 
+
+ /* hives pure honey blog button*/
+
+ h3{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #ddae44;
+    margin-bottom: none;
+    background-color: lightgray;
+    
+ }
+
+ .flex-container{
+    display: wrap;
+    
+ }
+  
+ .container{
+    position: relative;
+    text-align: center;
+    color: #4c4e52;
+    
+ }
+
+ .PureHoney{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+ }
+
+ .hero-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+ }
+ .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #4c4e52;
+    border: 1px solid #4c4e52;
+    padding: 12px 34px;
+    font-size: 25px;
+    background: transparent;
+    cursor: pointer;
+ }
+ .hero-btn:hover{
+    border: 1px solid lightgray;
+    background: lightgrey;
+    transition: 1s;
+ }
+
+ section{
+    display: block;
+    min-height: 500px;
+ }
+
+ nav .fa{
+    display: none;
+ }
+ 
+ @media(max-width: 700px){
+    .PureHoney {
+        font-size: 15px;
+    }
+    .hero-btn{
+        font-size: 15px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: lightgray;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+ }
+ 
+
+  /*primary content welcome to our farm*/
+
+ .primary-content{
+    width: 100%;
+    color: #4c4e52;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+ }
+
+ /*secondary content about us, products, blog */
+
+ .wrapper{
+    float: right;
+    padding: 15px;
+ }
+ .wrapper{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: #444;
+ }
+
+ #secondary-content {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+    text-align: center;
+   
+}
+#secondary-content article {
+    width: 460px;
+    height: 270px;
+    float: left;
+    background-color: #f5f5f5;
+}
+#secondary-content article:first-child {
+    
+    margin-right: 20px;
+    
+}
+#secondary-content article .overlay {
+    background: rgba(255, 255, 255, .95);
+    height: 230px;
+    width: 190px;
+    padding: 20px;
+}
+article h4 {
+    border-bottom: 1px solid #02b8dd;
+    padding-bottom: 20px;
+}
+.more-link {
+    border: 1px solid #02b8dd;
+    color: #02b8dd;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.more-link:hover {
+    background-color: #02b8dd;
+    color: #fff;
+}
+
+/* Footer Styling */
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+    background-color: #f8fafa; 
+}
+
+#footer-info {
+    width: 380px;
+    float: left;
+    margin-top: 10px;
+    flex: 50%;
+}
+#footer-links {
+    width: 520px;
+    float: right;
+    flex: 50%;
+}
+#footer-links ul {
+    list-style: none;
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#footer-links ul li {
+    margin: 10px 0;
+}
+
+@keyframes SingleBee {
+    0% {
+        margin-top: 5px;
+    }
+    10% {
+        margin-top: 50px;
+    }
+    25% {
+        margin-top: 5px;
+    }
+    40% {
+        margin-top: 50px;
+    }
+    55% {
+        margin-top: 5px;
+    }
+    70% {
+        margin-top: 50px;
+    }
+    95% {
+        margin-top: 5px;
+    }
+    100% {
+        margin-top: 50px;
+        transform: translateX(-1000px) translateY(20px)  ;
+    }
+   
+}
+.SingleBee {
+    
+    position: absolute;
+    right: 0;
+    top: 10;
+    width: 30px;
+    height: 30px;
+    border: none;
+    opacity: 100%;
+    
+    animation: SingleBee 6s linear infinite;
+}
+
+
+@media (max-width:600px){
+    .PureHoney .newsletter h2{
+    width: 20px; /* new width for screen <768px */
+    height: 20px; /* new height for screen <768px */
+    }
+ }
   
  
 
