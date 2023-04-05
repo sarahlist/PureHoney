@@ -15,3 +15,4 @@ The Childers Farm is dedicated to practicing sustainable and regenerative agricu
 2.  Create a custom animation that animates across the screen- bee flying on home page
 3.  Create accordion boxes to display different types of information - display information about the Childers Family and Their bees
 4. Add a sign up newsletter feature to stay updated with what is happening with the bees and honey. In future to work on purchasing honey from website.   Not functioning at first 
+5. Product Page - order button feature is not working yet-intentionally.  Farm is not ready for online sales yet.
