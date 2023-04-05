@@ -238,10 +238,17 @@ small {
 
 /* styling for about us page */
 
-section {
+div {
     display: flex;
     flex-wrap: wrap;
   }
+
+ .aboutus{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    
+ } 
 
 article {
     display: flex;
@@ -277,7 +284,36 @@ article {
     display: table;
 }
 
+label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #444;
+}
 
+label span{
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #444;
+}
+label + input[type="radio"]{
+    display: none;
+}
+
+.content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
 
 
 

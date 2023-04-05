@@ -18,7 +18,7 @@
 <body>
 
     <header>
-        <section class="header">    
+        <div class="header">    
             <nav> 
                 <a href="index.html"><img src="images/Honey-Logo.png"/>
                 <div class="nav-links" id="navLinks">
@@ -32,9 +32,9 @@
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>   
             </nav>  
-        </section>
+        </div>
 
-        <section>
+        <div>
             <section class="flying-bee">
                 <div class="SingleBee" style="display:block; transform: translate(-50%, -50%) translate (1100.5px, 0.5px) rotate(-10.4763deg);">
                     <img id="SingleBee"  src="images/SingleBee.png" alt="Bee" />
@@ -42,17 +42,15 @@
 
                 <h1>Childers Farm </h1> 
             </section>    
-        </section>
+        </div>
 
         
 
 
-   
-
     <div id="primary-content">
         <div class="container">
             
-            <article>
+            <div>
                 <h3>Welcome to Our Farm</h3>
                 <p>Welcome to our farm! We are proud to say that for the past 10 years, we have been dedicated 
                     to practicing sustainable and regenerative agriculture. Our farm is committed to promoting 
@@ -64,18 +62,19 @@
                     our mission. We look forward to sharing our products and practices with you. 
                 </p>
                 
-            </article>
+            </div>
         </div>
     </div>
 
 
-    <section>
+    <div class="aboutus">
         <article>
             <div class="clearfix">
                 <div class="box" style="background-color:#c39636">
                     <img src="images/honey-farm.jpg" alt="Honey Farm" width="460" height="345">
-                    <button class="accordion">Our Family</button>
-                    <div class="panel">
+                    <label for="first">Our Family<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="first">
+                    <div class="content">
                         <p>For Vern, Catie, Lauren, and Joey, the outdoors is not just a place to visit, but a way of life. 
                         They cherish the beauty and serenity of nature, and are passionate about preserving it for 
                         future generations to enjoy. Whether it's hiking, camping, or simply spending time in their garden, 
@@ -87,11 +86,15 @@
                     </div>    
                 </div>
             </div>
-
+        </article>
+    </div>
+    <div>
+        <article>
             <div class="box" style="background-color:#c39636">
                 <img src="images/bees.jpg" alt="Bees" width="460" height="345">
-                <button class="accordion">Our Bees</button>
-                <div class="panel">
+                <label for="second">Our Bees<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="second">
+                <div class="content">
                  <p>Our honeybees are an integral part of our family's commitment to sustainable beekeeping practices. We 
                     believe in treating our bees with the utmost care and respect, as they play a crucial role in pollinating 
                     our local ecosystem and providing us with delicious honey. As responsible beekeepers, we regularly 
@@ -101,10 +104,11 @@
                     our bees but also contribute to the health of our local ecosystem. We are proud to be part of a growing 
                     movement of environmentally conscious beekeepers who prioritize the well-being of their bees and the planet.    
                     </p>
-                </div>  
-        </article>
+                </div>
+        </article>  
+    </div>
 
-    
+    </section>
 
     <footer>
         <div class="wrapper">
@@ -157,7 +161,14 @@
          }
         }
    
-
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("accordion") == -1) {
+                x.className += " w3-accordion";
+            } else { 
+                x.className = x.className.replace(" w3-accordion", "");
+            }
+            }
     
      
 
