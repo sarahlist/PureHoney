@@ -238,13 +238,11 @@ small {
 
 /* styling for about us page */
 
-div {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
 
  .aboutus{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     text-align: center;
     
@@ -300,7 +298,7 @@ label span{
     font-size: 22px;
     color: #444;
 }
-label + input[type="radio"]{
+label + input[type="checkbox"]{
     display: none;
 }
 
@@ -311,7 +309,7 @@ label + input[type="radio"]{
     overflow: hidden;
     transition: max-height 0.5s;
 }
-label + input[type="radio"]:checked + .content{
+label + input[type="checkbox"]:checked + .content{
     max-height: 400px;
 }
 
