@@ -313,6 +313,9 @@ label + input[type="checkbox"]:checked + .content{
     max-height: 400px;
 }
 
+.flying-bee{
+    padding: ;
+}
 
 
 /* styling for hero image */
