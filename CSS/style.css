@@ -494,7 +494,15 @@ article {
     border: solid 1px #f6aeae;
     border-radius: 3px;
     color: #fff;
+    width: 100%;
+    transition:all 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+    text-align: center;
   }
+
+  
+
 
   @media (max-width: 800px) {
     .products {
@@ -883,6 +891,8 @@ article h4 {
     }
    
 }
+
+
 .SingleBee {
     
     position: absolute;
