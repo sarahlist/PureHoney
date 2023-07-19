@@ -120,6 +120,10 @@
         </div>
     </footer>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+
     <script>
 
         /*Javascript for Toggle Menu */   
@@ -133,14 +137,17 @@
         }   
 
 
-      SingleBee.onclick = fucntion();
+      SingleBee.onclick = function() {
         let start = Date.now();
         let timer = setInterval(function() {
-            let timePassed = Date.now() -start;
-            SingleBee.style.left = timePassed / 10 + 'px';
-            if(timePassed > 3000) clearInterval(timer);
+            let timePassed = Date.now() - start;
+            let distance = timePassed / 10000;
+            SingleBee.style.left = distance + 'px';
+            if(timePassed > 20000) clearInterval(timer);
     
-        },20);
+        },2000);
+    };
+    
     
         function myFunction() {
             var x = document.getElementById("navbar-content");
@@ -157,8 +164,6 @@
 
     </script>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 </body>

@@ -489,9 +489,9 @@ article {
   }
   
   .products button {
-    background-color: #f6aeae;
+    background-color: rgba(10,10, 10,0.3);
     padding: 10px;
-    border: solid 1px #f6aeae;
+    border: solid 1px rgba(10,10, 10,0.3);
     border-radius: 3px;
     color: #fff;
     width: 100%;
@@ -501,7 +501,18 @@ article {
     text-align: center;
   }
 
-  
+  .cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.cart a {
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
   @media (max-width: 800px) {
